@@ -1,1 +1,1 @@
-# Enhanced-Bootstrap-Modals
+# Enhanced Bootstrap Modals

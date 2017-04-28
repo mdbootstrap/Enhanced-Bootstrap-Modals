@@ -1,0 +1,1 @@
+$(".modal").on("shown.bs.modal",function(){$(".modal-backdrop").length||($("body").addClass("scrollable"),$(this).addClass("modal-scrolling"))}),$(".modal").on("hidden.bs.modal",function(){$("body").removeClass("scrollable")});

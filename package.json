@@ -1,0 +1,26 @@
+{
+  "name": "enhanced-bootstrap-modals",
+  "version": "1.0.0",
+  "description": "Collection of enhanced modals for Twitter Bootstrap",
+  "main": "enhanced-modals.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdbootstrap/enhanced-bootstrap-modals"
+  },
+  "keywords": [
+    "bootstrap",
+    "modals",
+    "mdbootstrap",
+    "enhanced"
+  ],
+  "author": "MDBootstrap",
+  "license": "ISC",
+  "homepage": "https://mdbootstrap.com",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "jquery": "^3.2.1"
+  }
+}

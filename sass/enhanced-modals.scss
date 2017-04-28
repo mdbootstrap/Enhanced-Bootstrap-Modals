@@ -1,0 +1,131 @@
+/*
+	Enhanced Bootstrap Modals
+	(C) 2017 StartupFlow
+	https://mdbootstrap.com
+	office@mdbootstrap.com
+*/
+
+// Distance
+$modal-distance:10px;
+
+// Styles for body
+body {
+	&.modal-open {
+		padding-right:0 !important;
+	}
+	&.scrollable {
+		overflow-y:auto;
+	}
+}
+
+// Enhanced Bootstrap Modals
+.modal {
+    .modal-header {
+        .modal-title {
+            font-weight: 300;
+        }
+    }
+
+    .modal-dialog {
+	    &.modal-top {
+			top:0;
+	    }
+		&.modal-left {
+			left:0;
+		}
+		&.modal-right {
+			right:0;
+		}
+		&.modal-bottom {
+			bottom:0;
+		}
+		&.modal-top-left {
+			top:$modal-distance;
+			left:$modal-distance;
+		}
+		&.modal-top-right {
+			top:$modal-distance;
+			right:$modal-distance;	
+		}
+		&.modal-bottom-left {
+			left:$modal-distance;
+			bottom:$modal-distance;
+		}
+		&.modal-bottom-right {
+			right:$modal-distance;
+			bottom:$modal-distance;
+		}
+	}
+
+	&.fade {
+		&.top:not(.show) .modal-dialog {
+		    transform: translate3d(0, -25%, 0);
+		}
+		&.left:not(.show) .modal-dialog {
+		    transform: translate3d(-25%, 0, 0);
+		}
+		&.right:not(.show) .modal-dialog {
+		    transform: translate3d(25%, 0, 0);
+		}
+		&.bottom:not(.show) .modal-dialog {
+		    transform: translate3d(0, 25%, 0);
+		}
+	}
+
+	&.modal-scrolling {
+		position:relative;
+		.modal-dialog {
+			position:fixed;
+			z-index:1050;
+		}
+	}
+
+	.modal-fluid {
+		width:100%;
+		max-width:100%;
+		.modal-content {
+			width:100%;
+		}
+	}
+
+	.modal-frame {
+		position:absolute;
+		width:100%;
+		max-width:100%;
+		margin:0;
+		&.modal-bottom {
+			bottom:0;
+		}
+	}
+
+	.modal-full-height {
+		display:flex;
+		position:absolute;
+		width:400px;
+		height:100%;
+		margin:0;
+		top:0;
+		bottom:0;
+		right:0;
+        &.modal-top, &.modal-bottom {
+            display:block;
+            width:100%;
+            max-width:100%;
+            height:auto;
+        }
+        &.modal-top {
+            bottom:auto;
+        }
+        &.modal-bottom {
+            top:auto;
+        }
+	}
+
+	.modal-side {
+		position:absolute;
+		right:$modal-distance;
+		bottom:$modal-distance;
+		margin:0;
+		width:400px;
+	}
+}
