@@ -1,6 +1,6 @@
 /*
 	Enhanced Bootstrap Modals
-	(C) 2017 StartupFlow
+	(C) 2017 MDBootstrap
 	https://mdbootstrap.com
 	office@mdbootstrap.com
 */
@@ -27,33 +27,35 @@ body {
     }
 
     .modal-dialog {
-	    &.modal-top {
-			top:0;
-	    }
-		&.modal-left {
-			left:0;
-		}
-		&.modal-right {
-			right:0;
-		}
-		&.modal-bottom {
-			bottom:0;
-		}
-		&.modal-top-left {
-			top:$modal-distance;
-			left:$modal-distance;
-		}
-		&.modal-top-right {
-			top:$modal-distance;
-			right:$modal-distance;	
-		}
-		&.modal-bottom-left {
-			left:$modal-distance;
-			bottom:$modal-distance;
-		}
-		&.modal-bottom-right {
-			right:$modal-distance;
-			bottom:$modal-distance;
+    	@media (min-width: 768px) {
+		    &.modal-top {
+				top:0;
+		    }
+			&.modal-left {
+				left:0;
+			}
+			&.modal-right {
+				right:0;
+			}
+			&.modal-bottom {
+				bottom:0;
+			}
+			&.modal-top-left {
+				top:$modal-distance;
+				left:$modal-distance;
+			}
+			&.modal-top-right {
+				top:$modal-distance;
+				right:$modal-distance;	
+			}
+			&.modal-bottom-left {
+				left:$modal-distance;
+				bottom:$modal-distance;
+			}
+			&.modal-bottom-right {
+				right:$modal-distance;
+				bottom:$modal-distance;
+			}
 		}
 	}
 
@@ -72,60 +74,62 @@ body {
 		}
 	}
 
-	&.modal-scrolling {
-		position:relative;
-		.modal-dialog {
-			position:fixed;
-			z-index:1050;
+	@media (min-width:768px) {
+		&.modal-scrolling {
+			position:relative;
+			.modal-dialog {
+				position:fixed;
+				z-index:1050;
+			}
 		}
-	}
 
-	.modal-fluid {
-		width:100%;
-		max-width:100%;
-		.modal-content {
+		.modal-fluid {
 			width:100%;
+			max-width:100%;
+			.modal-content {
+				width:100%;
+			}
 		}
-	}
 
-	.modal-frame {
-		position:absolute;
-		width:100%;
-		max-width:100%;
-		margin:0;
-		&.modal-bottom {
+		.modal-frame {
+			position:absolute;
+			width:100%;
+			max-width:100%;
+			margin:0;
+			&.modal-bottom {
+				bottom:0;
+			}
+		}
+
+		.modal-full-height {
+			display:flex;
+			position:absolute;
+			width:400px;
+			height:100%;
+			margin:0;
+			top:0;
 			bottom:0;
+			right:0;
+	        &.modal-top, &.modal-bottom {
+	            display:block;
+	            width:100%;
+	            max-width:100%;
+	            height:auto;
+	        }
+	        &.modal-top {
+	            bottom:auto;
+	        }
+	        &.modal-bottom {
+	            top:auto;
+	        }
 		}
-	}
 
-	.modal-full-height {
-		display:flex;
-		position:absolute;
-		width:400px;
-		height:100%;
-		margin:0;
-		top:0;
-		bottom:0;
-		right:0;
-        &.modal-top, &.modal-bottom {
-            display:block;
-            width:100%;
-            max-width:100%;
-            height:auto;
-        }
-        &.modal-top {
-            bottom:auto;
-        }
-        &.modal-bottom {
-            top:auto;
-        }
-	}
-
-	.modal-side {
-		position:absolute;
-		right:$modal-distance;
-		bottom:$modal-distance;
-		margin:0;
-		width:400px;
+		.modal-side {
+			position:absolute;
+			right:$modal-distance;
+			bottom:$modal-distance;
+			margin:0;
+			width:400px;
+		}
 	}
 }
